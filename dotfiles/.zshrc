@@ -15,14 +15,12 @@ export ZSH="/Users/devinefendy/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME=''
-ZSH_THEME='powerlevel10k/powerlevel10k'
-# for 'pure' don't put anything on field above
+ZSH_THEME="robbyrussell"
 
+ZSH_DISABLE_COMPFIX=true
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -43,7 +41,7 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -74,18 +72,20 @@ ZSH_THEME='powerlevel10k/powerlevel10k'
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    colored-man-pages
-    colorize
-    docker
-    docker-machine
-    docker-compose
-    )
+plugins=(git
+        iterm2
+        osx
+        colorize
+        colored-man-pages
+        yarn
+        docker
+        docker-compose
+
+)
 
 # ------------------------------------ aliases ------------------------------------
 # Directory shortcut
@@ -129,40 +129,8 @@ alias dnet='docker network'
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/opt/zsh-git-prompt/zshrc.sh
-
-# export FPATH="$FPATH:$HOME/.zsh/pure"
-# if type brew &>/dev/null; then
-#     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-#     autoload -Uz compinit
-#     compinit
-#   fi
-
-PATH=$PATH:$HOME/opt/anaconda3/bin
 
 source $ZSH/oh-my-zsh.sh
-
-# autoload -U promptinit; promptinit
-# prompt pure
-
-
-# # declares an array with the emojis we want to support
-# EMOJIS=(🐳 😺 🐙 🦀 🐹 🐶 🐼 🚀 💩)
-
-# # function that selects and return a random element from the EMOJIS set
-# RANDOM_EMOJI() {
-#   SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
-#   echo $SELECTED_EMOJI;
-# }
-
-# CUST_TIME="%F{white}%*"
-# CUST_USER='devin-efendy'
-
-# PROMPT="[⌚ $bg[green]$fg[black]%*$bg[default]$fg[white]⌗👨🏼‍💻 $bg[cyan]$fg[black]%m$bg[default]$fg[white]]  $PROMPT"
-
-
-
 
 # User configuration
 
@@ -189,13 +157,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
