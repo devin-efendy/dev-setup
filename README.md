@@ -1,5 +1,5 @@
 # dev-setup
-My collection of dot files.
+My collection of dev setups: dot files and other fun stuff.
 
 ## Powerline10k - Zsh theme
 https://github.com/romkatv/powerlevel10k#oh-my-zsh
@@ -17,6 +17,8 @@ http://mayccoll.github.io/Gogh/
 * lsd
 * lolcat
 * htop
+* nvm
+* yarn
 
 
 ## Font:
