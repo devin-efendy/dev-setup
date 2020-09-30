@@ -6,6 +6,7 @@
 " Plugins
 " --------------------------------
 set nocompatible              " be iMproved, required
+set relativenumber
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -60,8 +61,8 @@ let g:rainbow_active = 1    " 0 if you want to enable it later via :RainbowToggl
 set number          " Line numbers
 
 " Tab size
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4 
 set shiftwidth=2
 set expandtab
 

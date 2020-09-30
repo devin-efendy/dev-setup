@@ -82,15 +82,16 @@ plugins=(
     git
     colored-man-pages
     colorize
+    docker
+    docker-machine
+    docker-compose
     )
-
-export FPATH="$FPATH:$HOME/.zsh/pure"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
 
 # ------------------------------------ aliases ------------------------------------
 # Directory shortcut
 alias main="cd ~/Documents/Main/"
 alias desktop="cd ~/Desktop/"
+alias cdicloud="cd /Users/devinefendy/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # ls from the future
 alias ls='lsd'
@@ -106,18 +107,41 @@ alias cat='bat'
 alias szsh='source ~/.zshrc'
 alias sp10k='source ~/.p10k.zsh'
 
+# docker
+alias dcon='docker container'
+alias drun='docker container run'
+alias dexec='docker container exec'
+alias dstart='docker container start'
+alias dstop='docker container stop'
+alias drm='docker container rm'
+alias drmf='docker container rm -f'
+alias drunrmit='docker container run --rm -it'
+alias dbuild='docker build'
 
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dpsaq='docker ps -aq' 
+alias killall-container='docker container rm -f $(docker ps -aq)'
+
+alias dim='docker image'
+alias dimls='docker images'
+alias dnet='docker network'
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/opt/zsh-git-prompt/zshrc.sh
 
+# export FPATH="$FPATH:$HOME/.zsh/pure"
+# if type brew &>/dev/null; then
+#     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+#     autoload -Uz compinit
+#     compinit
+#   fi
 
 PATH=$PATH:$HOME/opt/anaconda3/bin
 
-
 source $ZSH/oh-my-zsh.sh
-
-
 
 # autoload -U promptinit; promptinit
 # prompt pure
@@ -165,6 +189,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=180'
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
