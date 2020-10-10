@@ -1,6 +1,10 @@
 # dev-setup
 My collection of dev setups: dot files and other fun stuff.
 
+## Credits
+* Alphonse Mariya, [alfunx/.dotfiles](https://github.com/alfunx/.dotfiles/blob/master/.gitconfig#L218-L224) for .gitconfig
+* Naz Malik, [medium post](https://medium.com/vimdojo/set-up-vim-c8b41c6e539c) for .vimrc
+  
 ## Powerline10k - Zsh theme
 https://github.com/romkatv/powerlevel10k#oh-my-zsh
 
@@ -19,6 +23,8 @@ http://mayccoll.github.io/Gogh/
 * htop
 * nvm
 * yarn
+* bat
+* visual-studio-code
 
 
 ## Font:
