@@ -155,15 +155,6 @@ alias ta-2='echo "=== Testing Phase Q2 ===" && ca-2 && ra-2'
 alias ta1-all='ta1-1 && ta1-2 && ta1-3 && ta1-4'
 alias java-rm-class="rm -rf *.class"
 
-# COMP3430 Marking
-# TermWork/2021/Winter/Assignments/A1
-alias 3430-pass="echo 'ec>=JGcxED7n@)Q'"
-alias ssh-3430="sshpass -p 'ec>=JGcxED7n@)Q' ssh csta3430@aviary.cs.umanitoba.ca"
-alias ssh-c3430="ssh csta3430@falcon.cs.umanitoba.ca"
-
-alias c3430="cd ~/Desktop/grading-ta/comp3430-w21"
-alias c1020="cd ~/Desktop/grading-ta/comp1020"
-
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
