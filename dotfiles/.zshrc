@@ -93,6 +93,10 @@ alias main="cd ~/Documents/Main/"
 alias desktop="cd ~/Desktop/"
 alias cdicloud="cd /Users/devinefendy/Library/Mobile\ Documents/com~apple~CloudDocs"
 
+# Resume
+alias cp-res-swe="cp ./swe/resume-devin-efendy.pdf ../swe/Devin_Efendy_Resume.pdf"
+alias cp-res-ds="cp ./data-science/resume-devin-efendy.pdf ../data-science/Devin_Efendy_Resume.pdf"
+
 # ls from the future
 alias ls='lsd'
 alias l='lsd -l'
@@ -118,6 +122,8 @@ alias drmf='docker container rm -f'
 alias drunrmit='docker container run --rm -it'
 alias dbuild='docker build'
 
+alias drmvol='docker volume rm $(docker volume ls -q)'
+
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias dpsaq='docker ps -aq' 
@@ -126,6 +132,37 @@ alias killall-container='docker container rm -f $(docker ps -aq)'
 alias dim='docker image'
 alias dimls='docker images'
 alias dnet='docker network'
+
+# Links
+alias url-linkedin='echo https://www.linkedin.com/in/devinefendy/'
+alias url-github='echo https://github.com/devin-efendy'
+alias url-portfolio='echo https://devinsefendy.com'
+
+alias goto-linkedin='open https://www.linkedin.com/in/devinefendy/'
+alias goto-github='open https://github.com/devin-efendy'
+alias goto-portfolio='open https://devinsefendy.com'
+
+# COMP1020 marking 
+alias ca-1='javac -cp .:junit-4.13.jar:hamcrest-core-1.3.jar MarkingQ1.java'
+alias ca-2='javac -cp .:junit-4.13.jar:hamcrest-core-1.3.jar MarkingQ2.java'
+
+alias ra-1='java -cp .:junit-4.13.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkingQ1'
+alias ra-2='java -cp .:junit-4.13.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkingQ2'
+
+alias ta-1='echo "=== Testing Phase Q1 ===" && ca-1 && ra-1'
+alias ta-2='echo "=== Testing Phase Q2 ===" && ca-2 && ra-2'
+
+alias ta1-all='ta1-1 && ta1-2 && ta1-3 && ta1-4'
+alias java-rm-class="rm -rf *.class"
+
+# COMP3430 Marking
+# TermWork/2021/Winter/Assignments/A1
+alias 3430-pass="echo 'ec>=JGcxED7n@)Q'"
+alias ssh-3430="sshpass -p 'ec>=JGcxED7n@)Q' ssh csta3430@aviary.cs.umanitoba.ca"
+alias ssh-c3430="ssh csta3430@falcon.cs.umanitoba.ca"
+
+alias c3430="cd ~/Desktop/grading-ta/comp3430-w21"
+alias c1020="cd ~/Desktop/grading-ta/comp1020"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -165,3 +202,20 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/devinefendy/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/devinefendy/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/devinefendy/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/devinefendy/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
