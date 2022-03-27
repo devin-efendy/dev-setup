@@ -25,6 +25,16 @@ http://mayccoll.github.io/Gogh/
 * yarn
 * bat
 * visual-studio-code
+* spotify
+* spark
+* discord
+* notion
+* docker
+* postman
+* iterm2
+* obsidian
+* iina
+* zoom
 
 
 ## Font:
